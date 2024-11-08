@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
             formData.append('file', file);
             formData.append('field_name', fieldName);
 
+            // Show loader
+            this.textContent = 'Uploading...';
+            this.classList.add('btn-loading');
+
             fetch('/update_lease/', {
                 method: 'POST',
                 body: formData,
@@ -33,11 +37,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     alert('File upload failed.');
                     console.error(data);
+                    this.textContent = 'Upload';
+                    this.classList.remove('btn-loading');
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
                 alert('An error occurred while uploading the file.');
+                this.textContent = 'Upload';
+                this.classList.remove('btn-loading');
             });
         });
     });
