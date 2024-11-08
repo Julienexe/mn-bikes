@@ -73,7 +73,7 @@ def signUp(request):
             new_user = authenticate(email=email, password=password)
             if new_user is not None:
                 login(request, new_user)
-                return render(request, "riders/dashboard.html", {"rider": rider})
+                return redirect("riders:dashboard")
     else:
         form = RiderForm()
     return render(request, "riders/signup.html", {"form": form})
