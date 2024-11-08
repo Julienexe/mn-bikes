@@ -1,0 +1,37 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="module bg-dark-30" data-background="{% static 'images/bike-1.jpeg' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h1 class="module-title font-alt mb-0">Register</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container mt-5">
+
+    <form class="form" action="{% url 'riders:login' %}" method="POST">
+        <div class="row">
+
+            <h2>Login </h2>
+            {% csrf_token %}
+            <!-- email and password fields -->
+            <div class="form-group">
+                <input class="form-control" id="email" type="text" name="email" placeholder="email" />
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="password" type="password" name="password" placeholder="Password" />
+            </div>
+
+
+            
+
+            <button type="submit" class="btn btn-primary">Login</button>
+            <p>Do not have an account? <a href="{% url 'riders:signup' %}">Sign up</a></p>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="home-section home-parallax home-fade home-full-height" id="home">
+    <div class="hero-slider">
+      <ul class="slides">
+        <li class="bg-dark-30 bg-dark" style="background-image:url('{{STATIC_URL}}../static/images/lg7.jpg');">
+          <div class="titan-caption">
+            <div class="caption-content">
+              <div class="font-alt mb-30 titan-title-size-1">Hello &amp; welcome</div>
+              <div class="font-alt mb-40 titan-title-size-4">We are MN Transport</div><a class="section-scroll btn btn-border-w btn-round" href="#about">Learn More</a>
+            </div>
+          </div>
+        </li>
+        <li class="bg-dark-30 bg-dark" style="background-image:url('{{STATIC_URL}}../static/images/lg10.jpg');">
+          <div class="titan-caption">
+            <div class="caption-content">
+              <div class="font-alt mb-30 titan-title-size-2">We lease motorcycles
+              </div><a class="btn btn-border-w btn-round" href="#">Learn More</a>
+            </div>
+          </div>
+        </li>
+        <li class="bg-dark-30 bg-dark" style="background-image:url('{{STATIC_URL}}../static/images/lg8.jpg');">
+          <div class="titan-caption">
+            <div class="caption-content">
+              <div class="font-alt mb-30 titan-title-size-1">We build fleets that span cities</div>
+              <div class="font-alt mb-40 titan-title-size-3">QUALITY SERVICE</div><a class="section-scroll btn btn-border-w btn-round" href="#about">Learn More</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div class="main">
+    <section class="module" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <h2 class="module-title font-alt">About Us</h2>
+              <div class="module-subtitle font-serif large-text"<p>MN Transport Company-SMC LTD was incorporated in 2019 to provide livelihood for Ugandans
+                through
+                the provision of a Boda-Boda leasing facility.
+            </p>
+            <p>To date the company has given out over 300 boda bodas which has positively impacted the
+                lives of
+                the beneficiaries.
+            </p>
+            <p>MN Transport company also offers fleet management services to individuals who want to
+                join the
+                business but have no expertise or time to manage their own fleets.</p></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-2 col-sm-offset-5">
+              <div class="large-text align-center"><a class="section-scroll" href="#services"><i class="fa fa-angle-down"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <hr class="divider-w">
+        <section class="module" id="services">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <h2 class="module-title font-alt">Our Advantages</h2>
+                <div class="module-subtitle font-serif">MN Transport Company-SMC LTD offers fleet management services
+                    to investors who wish to own Boda Bodas but have no time or expertise to manage them.
+                    
+                    The following are the services we offer under fleet management</div>
+              </div>
+            </div>
+            <div class="row multi-columns-row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <div class="features-icon"><span class="icon-genius"></span></div>
+                  <h3 class="features-title font-alt">Competence</h3>
+                  <p>All of our recruited riders are competent and licensed to drive</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <div class="features-icon"><span class="icon-basket"></span></div>
+                  <h3 class="features-title font-alt">Procurement</h3>
+                  <p>We handle purchase of bikes and accessories</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <div class="features-icon"><span class="icon-map"></span></div>
+                  <h3 class="features-title font-alt">Tracking</h3>
+                  <p>Tracking motor bikes in and around the city</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <div class="features-icon"><span class="icon-wallet"></span></div>
+                  <h3 class="features-title font-alt">Payments</h3>
+                  <p>Collection and remittance of weekly payments</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <div class="features-icon"><span class="icon-lock"></span></div>
+                  <h3 class="features-title font-alt">Payment Security</h3>
+                  <p>Impounding of bikes from non-paying riders</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <div class="features-icon"><span class="icon-anchor"></span></div>
+                  <h3 class="features-title font-alt">Recovery</h3>
+                  <p>Recovery of impounded bikes from police or other law enforcement agencies.</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <div class="features-icon"><span class="icon-caution"></span></div>
+                  <h3 class="features-title font-alt">NOTE</h3>
+                  <p>The company charges a fee of only UGX 20,000
+                    per bike per week.
+                    An investor will earn a minimum net return of 24% per year per bike which is highly competitive.</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+        
+       
+{% endblock %}

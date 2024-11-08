@@ -1,0 +1,86 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<!-- user dashboard page/profile page -->
+<section class="home-section home-parallax home-fade bg-dark-30" id="home"
+    data-background="{% static 'images/bike-2.jpeg' %}">
+    <div class="titan-caption">
+        <div class="caption-content">
+            <div class="font-alt mb-30 titan-title-size-1">Hello {{rider.first_name}}</div>
+            <div class="font-alt mb-40 titan-title-size-4">This is your profile</div><a
+                class="section-scroll btn btn-border-w btn-round" href="#about">Your lease</a>
+        </div>
+    </div>
+</section>
+<div class="main">
+    <section class="module" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h2 class="module-title font-alt">
+                        {{rider.first_name}} {{rider.last_name}}
+                    </h2>
+                    <div class="module-subtitle font-serif large-text">
+                        {% if documents_missing %}
+                        <p>It looks like you have some documents missing. Please upload the following documents:</p>
+
+                        {% else %}
+                        <p>It looks like you have all the documents you need. You can now start your lease.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 col-sm-offset-5">
+                    <div class="large-text align-center"><a class="section-scroll" href="#services"><i
+                                class="fa fa-angle-down"></i></a></div>
+                </div>
+            </div>
+            <hr class="divider-w">
+            <section class="module" id="services">
+                <div class="container">
+                    {% if documents_missing %}
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <h2 class="module-title font-alt">Your info</h2>
+                            <div class="module-subtitle font-serif">Click to upload your missing documents then proceed
+                                to pay for your lease</div>
+                        </div>
+                    </div>
+                    <div class="row multi-columns-row">
+                        {% for doc in missing %}
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="features-item">
+                                <div class="features-icon"><span class="icon-caution"></span></div>
+                                <h3 class="features-title font-alt">{{doc}}</h3>
+                                <p>Click below to upload</p>
+                                <div class="btn-group-vertical" role="group">
+
+                                    
+                                    <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="{{doc}}">
+                                    <button class="upload-button btn btn-danger" type="button" id="{{doc}}">submit</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <h2 class="module-title font-alt">Your info</h2>
+                            <div class="module-subtitle font-serif">
+                                
+                                Click to process your payment</div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </section>
+
+        </div>
+    </section>
+    
+</div>
+
+{% endblock %}

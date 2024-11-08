@@ -1,0 +1,358 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="home-section home-parallax home-fade home-full-height bg-dark-60 agency-page-header" id="home"
+    data-background="{% static 'images/bikes-2.jpeg' %}">
+    <div class="titan-caption">
+        <div class="caption-content">
+            <div class="font-alt mb-30 titan-title-size-1">Boda Boda Leasing</div>
+            <div class="font-alt mb-40 titan-title-size-3">Fleet Management made <span class="rotate">easy | simple |
+                    flexible</span>
+            </div><a class="section-scroll btn btn-border-w btn-circle" href="#leasing">Own a bike</a>
+        </div>
+    </div>
+</section>
+<div class="main">
+
+    <section class="module pt-0 pb-0" id="about">
+        <div class="row position-relative m-0">
+            <div class="col-xs-12 col-md-6 side-image" data-background="{% static 'images/boxer.png' %}"></div>
+            <div class="col-xs-12 col-md-6 col-md-offset-6 side-image-text">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="module-title font-alt align-left">About Us</h2>
+                        <div class="module-subtitle font-serif align-left">
+                            <p>MN Transport Company-SMC LTD was incorporated in 2019 to provide livelihood for Ugandans
+                                through
+                                the provision of a Boda-Boda leasing facility.
+                            </p>
+                            <p>To date the company has given out over 300 boda bodas which has positively impacted the
+                                lives of
+                                the beneficiaries.
+                            </p>
+                            <p>MN Transport company also offers fleet management services to individuals who want to
+                                join the
+                                business but have no expertise or time to manage their own fleets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="module" id="bikes">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h2 class="module-title font-alt">Boda-Boda leasing</h2>
+                    <div class="module-subtitle font-serif">MN Transport company leases Boda Bodas to eligible
+                        individuals at
+                        very affordable terms and rates. An individual can either take 1 one year or a 2 year lease
+                        depending on
+                        their preference.
+
+                        The successful applicants will receive their bikes within a maximum period of 2 weeks from the
+                        date of
+                        application.</div>
+                </div>
+            </div>
+            <hr class="divider-w pt-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h4 class="font-alt mb-0" id="leasing">Requirements</h4>
+                        <hr class="divider-w mt-10 mb-20">
+                        <div role="tabpanel">
+                            <ul class="nav nav-tabs font-alt" role="tablist">
+                                <li class="active"><a href="#support" data-toggle="tab"><span
+                                            class="icon-bike"></span>riders</a></li>
+                                <li><a href="#sales" data-toggle="tab"><span class="icon-pricetags"></span>investors</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="support">
+                                    <div class="row mb-60">
+                                        <div class="col-sm-6 col-md-3 col-lg-3">
+                                            <div class="alt-features-item">
+                                                <div class="alt-features-icon"><span class="icon-wallet"></span></div>
+                                                <h3 class="alt-features-title font-alt">Money</h3>Initial deposit of UGX
+                                                1,000,000
+                                            </div>
+                                            <div class="alt-features-item">
+                                                <div class="alt-features-icon"><span class="icon-document"></span></div>
+                                                <h3 class="alt-features-title font-alt">Cover Letter</h3>Introduction
+                                                letter from your LC1 chairperson
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3 col-lg-3">
+                                            <div class="alt-features-item">
+                                                <div class="alt-features-icon"><span class="icon-profile-male"></span>
+                                                </div>
+                                                <h3 class="alt-features-title font-alt">National ID</h3>Copy of your
+                                                National ID
+                                            </div>
+                                            <div class="alt-features-item">
+                                                <div class="alt-features-icon"><span class="icon-camera"></span></div>
+                                                <h3 class="alt-features-title font-alt">Face</h3>2 Guarantors
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-3 col-lg-3">
+                                            <div class="alt-features-item">
+                                                <div class="alt-features-icon"><span class="icon-layers"></span></div>
+                                                <h3 class="alt-features-title font-alt">National ID</h3>National ID of
+                                                next of kin
+                                            </div>
+                                            <div class="alt-features-item">
+                                                <div class="alt-features-icon"><span class="icon-key"></span></div>
+                                                <h3 class="alt-features-title font-alt">Riding</h3>Riding permit
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <a href="{% url 'riders:signup' %}"><button class="btn btn-g btn-round" type="submit">Sign Up</button></a>
+                                </div>
+                                <div class="tab-pane" id="sales">
+                                    An individual who wishes to invest in the Boda boda leasing business will bring the
+                                    following requirements
+                                    <ul class="font-serif">
+                                        <li>An investment amount worth UGX 6,000,000 that includes both a tracking
+                                            device and third part insurance. (The amounts are based on current prices
+                                            but will change from time to time)</li>
+                                        <li>An additional UGX 600,000 will paid if an investor desires to
+                                            comprehensively insure his/her bikes.</li>
+                                        <li>The minimum number of bikes an investor should buy in the beginning is 2.
+                                        </li>
+                                        <li>The Account details where weekly remittances will be paid to the investor by
+                                            the company</li>
+                                        <li>Details of the beneficiary/beneficiaries to be paid in the event the
+                                            investor may not be able to receive monies directly.</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <hr class="divider-w">
+
+    <section class="module bg-dark-60 pt-0 pb-0 parallax-bg testimonial"
+        data-background="{% static 'images/bike-1.jpeg'%}">
+        <div class="testimonials-slider pt-140 pb-140">
+            <ul class="slides">
+                <li>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="module-icon"><span class="icon-quote"></span></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <blockquote class="testimonial-text font-alt">MN Transport has the ability to guarantee quality and efficiency</blockquote>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-offset-4">
+                                <div class="testimonial-author">
+                                    <div class="testimonial-caption font-alt">
+                                        <div class="testimonial-title">Ntege Absolm</div>
+                                        <div class="testimonial-descr">Share Holder</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="module-icon"><span class="icon-quote"></span></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <blockquote class="testimonial-text font-alt">I love the rates and the support from the company
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-offset-4">
+                                <div class="testimonial-author">
+                                    <div class="testimonial-caption font-alt">
+                                        <div class="testimonial-title">Semakula Peter</div>
+                                        <div class="testimonial-descr">Boda boda Rider</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="module-icon"><span class="icon-quote"></span></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <blockquote class="testimonial-text font-alt">Basically, they make it easy to make your money work for you</blockquote>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-offset-4">
+                                <div class="testimonial-author">
+                                    <div class="testimonial-caption font-alt">
+                                        <div class="testimonial-title">Okello Arnold</div>
+                                        <div class="testimonial-descr">Investor</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="module" id="alt-features">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h2 class="module-title font-alt">Fleet Management Services</h2>
+                    <div class="module-subtitle font-serif">MN Transport Company-SMC LTD offers fleet management
+                        services
+                        to investors who wish to own Boda Bodas but have no time or expertise to manage them.
+
+                        The following are the services we offer under fleet management</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 hidden-xs hidden-sm">
+                    <div class="alt-services-image align-center"><img src="{% static 'images/bike-2.jpeg' %}"
+                            alt="Feature Image"></div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                    <div class="alt-features-item">
+                        <div class="alt-features-icon"><span class="icon-strategy"></span></div>
+                        <h3 class="alt-features-title font-alt">Competence</h3>Recruitment of competent riders
+                    </div>
+                    <div class="alt-features-item">
+                        <div class="alt-features-icon"><span class="icon-basket"></span></div>
+                        <h3 class="alt-features-title font-alt">Procurement</h3>Purchase of bikes and accessories
+                    </div>
+                    <div class="alt-features-item">
+                        <div class="alt-features-icon"><span class="icon-map"></span></div>
+                        <h3 class="alt-features-title font-alt">Tracking</h3>Tracking motorbikes
+                    </div>
+                    <div class="alt-features-item">
+                        <div class="alt-features-icon"><span class="icon-wallet"></span></div>
+                        <h3 class="alt-features-title font-alt">Payments</h3>Collection and remittance of weekly
+                        payments
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                    <div class="alt-features-item">
+                        <div class="alt-features-icon"><span class="icon-lock"></span></div>
+                        <h3 class="alt-features-title font-alt">Riders</h3>Impounding non-paying riders
+                    </div>
+                    <div class="alt-features-item">
+                        <div class="alt-features-icon"><span class="icon-document"></span></div>
+                        <h3 class="alt-features-title font-alt">Statements</h3>Maintenance of rider statements
+                    </div>
+                    <div class="alt-features-item">
+                        <div class="alt-features-icon"><span class="icon-anchor"></span></div>
+                        <h3 class="alt-features-title font-alt">Recovery</h3> Recovery/retrieval of impounded bikes by
+                        police or other law enforcement agencies
+                    </div>
+                    <div class="alt-features-item">
+                        <div class="alt-features-icon"><span class="icon-caution"></span></div>
+                        <h3 class="alt-features-title font-alt">Note</h3>The company charges a fee of only UGX 20,000
+                        per bike per week.
+                        An investor will earn a minimum net return of 24% per year per bike which is highly competitive.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="module" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h2 class="module-title font-alt">Contact us</h2>
+                    <div class="module-subtitle font-serif"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <form id="contactForm" role="form" method="post" action="php/contact.php">
+                        <div class="form-group">
+                            <label class="sr-only" for="name">Name</label>
+                            <input class="form-control" type="text" id="name" name="name" placeholder="Your Name*"
+                                required="required" data-validation-required-message="Please enter your name." />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="email">Email</label>
+                            <input class="form-control" type="email" id="email" name="email" placeholder="Your Email*"
+                                required="required"
+                                data-validation-required-message="Please enter your email address." />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="7" id="message" name="message"
+                                placeholder="Your Message*" required="required"
+                                data-validation-required-message="Please enter your message."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-block btn-round btn-d" id="cfsubmit" type="submit">Submit</button>
+                        </div>
+                    </form>
+                    <div class="ajax-response font-alt" id="contactFormResponse"></div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="alt-features-item mt-0">
+                        <div class="alt-features-icon"><span class="icon-megaphone"></span></div>
+                        <h3 class="alt-features-title font-alt">Where to meet</h3>MN Transport Company<br />Kasangati
+                        Town<br />Gayaza Road just before Shell Petrol Station, Kasangati
+                        <br>P.O Box 127764, Kampala, Uganda <br>
+                        Room No.5, <br>St. Jude Shopping Mall
+
+                    </div>
+                    <div class="alt-features-item mt-xs-60">
+                        <div class="alt-features-icon"><span class="icon-map"></span></div>
+                        <h3 class="alt-features-title font-alt">Say Hello</h3>Email: mntransportcompanysmcltd@gmail.com
+                        <br />Tel1: 0706 305 319 <br>
+                        Tel2: 0709 619 369
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="module-small bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="widget">
+                        <h5 class="widget-title font-alt">About MN</h5>
+
+                        <p>Tel1: 0706 305 319 <br>
+                            Tel2: 0709 619 369</p>
+                        <p>Email: <a href="#">mntransportcompanysmcltd@gmail.com
+
+                            </a></p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    {% endblock %}
