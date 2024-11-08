@@ -128,11 +128,11 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
-    'https://mntransport.onrender.com/',
+    'https://mntransport.onrender.com',
     ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://mntransport.onrender.com/',
+    'https://mntransport.onrender.com',
 
 ]
 
